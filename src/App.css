@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #396C82;
+  overflow-x: hidden;
+}
+
+.nav-btn-famtrack {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #959595;
+  margin: 1rem 0;
+  animation-name: nav-btn-deactivated;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+.nav-btn-famtrack-active {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #396C82;
+  margin: 1rem 0;
+  box-shadow: 0 6px 10px 0 gray;
+  animation-name: nav-btn-activated;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+.logout-btn-famtrack:hover {
+  color: blue;
+}
+
+.content-container-famtrack {
+  display: flex;
+}
+
+.navbar-famtrack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 1rem;
+}
+
+@keyframes nav-btn-activated {
+  from {
+    color: #959595;
+    box-shadow: 0 0 0 0 gray;
+  }
+  to {
+    color: #396C82;
+    box-shadow: 0 6px 10px 0 gray;
+  }
+}
+
+@keyframes nav-btn-deactivated {
+  from {
+    color: #396C82;
+    box-shadow: 0 6px 10px 0 gray;
+  }
+  to {
+    color: #959595;
+    box-shadow: 0 0 0 0 gray;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #396C82;
+    overflow-x: hidden;
+  }
+
+  .content-container-famtrack {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .navbar-famtrack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .nav-btn-famtrack-active {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #396C82;
+    margin: 1rem 0;
+    box-shadow: 0 6px 10px 0 gray;
+    animation-name: nav-btn-activated;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+
+  .router-farmtrack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .nav-btn-famtrack {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #959595;
+    margin: 1rem 0;
+    animation-name: nav-btn-deactivated;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+}
