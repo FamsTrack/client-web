@@ -7,7 +7,7 @@ function Login() {
           <div style={{ "flex": "8" }}>
             <img className="container" src="https://i.ibb.co/V9GXxG8/Fams-Track-s-2-removebg-preview.png" width="auto" style={{ "maxWidth": "400px" }} />
           </div>
-          <div className="container" style={{ "flex": "4" }}>
+          <div className="container pt-md-5 mt-md-5" style={{ "flex": "4" }}>
             <h2 className="p-3">Welcome Back!</h2>
             <form>
               <div class="form-floating mb-3">
@@ -18,11 +18,11 @@ function Login() {
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
                 <label for="floatingPassword">Password</label>
               </div>
-              <button className="btn btn-primary mt-3 mb-5">Log In</button>
+              <button className="btn btn-primary mt-3 mb-md-5 mb-3">Log In</button>
             </form>
           </div>
         </div>
-        <div className="container mt-5">
+        <div className="container mt-md-5 mt-3">
           <div className="container" style={{ "textAlign": "left" }}>
             <h1>Best Tracking App</h1>
             <p>Are you worried that your family will get lost during their Hajj trip, or are you a travel tour vendor who wants to be able to monitor the whereabouts of your congregation? Calm down, FamTrack is here to help you. FamTrack is an IoT-based application that can monitor the whereabouts of your family or congregation and we also have a panic button feature if your family or clients get lost.</p>

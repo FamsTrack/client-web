@@ -1,7 +1,13 @@
 function Groups() {
   return (
     <div>
-      <h1>Groups</h1>
+      <div>
+        <h1>Groups</h1>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 }

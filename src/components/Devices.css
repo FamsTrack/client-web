@@ -1,0 +1,306 @@
+h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.title-devices-famtrack {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.title-text-famtrack {
+  font-size: 30px;
+  text-align: center;
+}
+
+.devices-list-famtrack {
+  display: grid;
+  justify-content: left;
+  grid-template-columns: 100%;
+  width: auto;
+  margin: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 1rem 2rem;
+}
+
+.device-list-row-famtrack {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 20rem 4rem 8rem 14rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.name-device-famtrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.age-device-famtrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.family-color-famtrack {
+  color: rgb(81, 154, 228);
+}
+
+.contact-device-famtrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.lastseen-device-famtrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img-devices-famtrack {
+  border-radius: 50px;
+  width: 80px;
+}
+
+@media only screen and (min-width: 1500px) {
+  h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  .title-text-famtrack {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .img-devices-famtrack {
+    border-radius: 60px;
+    width: 110px;
+  }
+
+  .device-list-row-famtrack {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 27rem 11rem 15rem 22rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .family-color-famtrack {
+    color: rgb(81, 154, 228);
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .title-text-famtrack {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .img-devices-famtrack {
+    border-radius: 60px;
+    width: 60px;
+  }
+
+  .device-list-row-famtrack {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 15rem 3rem 6rem 12rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .family-color-famtrack {
+    color: rgb(81, 154, 228);
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .title-text-famtrack {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .img-devices-famtrack {
+    border-radius: 60px;
+    width: 50px;
+  }
+
+  .device-list-row-famtrack {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 13rem 2rem 4rem 10rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .family-color-famtrack {
+    color: rgb(81, 154, 228);
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  .title-text-famtrack {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .img-devices-famtrack {
+    border-radius: 60px;
+    width: 50px;
+  }
+
+  .device-list-row-famtrack {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 11rem 2rem 3rem 8rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .family-color-famtrack {
+    color: rgb(81, 154, 228);
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  .title-text-famtrack {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .img-devices-famtrack {
+    border-radius: 60px;
+    width: 50px;
+  }
+
+  .device-list-row-famtrack {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 10rem 1rem 2rem 6rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .family-color-famtrack {
+    color: rgb(81, 154, 228);
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  .img-devices-famtrack {
+    border-radius: 60px;
+    width: 60px;
+  }
+
+  .device-list-row-famtrack {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 11rem 2rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .title-text-famtrack {
+    display: none;
+  }
+  
+  .family-color-famtrack {
+    color: rgb(81, 154, 228);
+    font-size: 8px;
+  }
+  
+  .contact-device-famtrack {
+    display: none;
+  }
+  
+  .lastseen-device-famtrack {
+    display: none;
+  }
+
+  .card-cont-famtrack {
+    margin-top: -2rem;
+  }
+
+  .devices-list-famtrack {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .age-device-famtrack {
+    display: none;
+  }
+
+  .device-list-row-famtrack {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 100%;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .devices-list-famtrack {
+    display: grid;
+    justify-content: left;
+    grid-template-columns: 100%;
+    width: auto;
+    margin: 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 1rem 0rem;
+  }
+
+  .card-cont-famtrack {
+    margin-top: -2rem;
+  }
+
+  .name-device-famtrack {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

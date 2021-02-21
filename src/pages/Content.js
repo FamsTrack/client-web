@@ -10,7 +10,7 @@ import Devices from "../components/Devices";
 
 function Content() {
   return (
-    <div className="row" style={{ "overflow": "hidden", "backgroundImage": "linear-gradient(to bottom right, #FFFFFF, #8BE3FF)" }}>
+    <div className="row" style={{ "backgroundImage": "linear-gradient(to bottom right, #FFFFFF, #8BE3FF)" }}>
       <div className="content-container-famtrack">
         <Navbar style={{"flex": "1"}} />
         <div style={{"flex": "2"}}>

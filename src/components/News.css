@@ -1,0 +1,47 @@
+.news-cars-container-famtrack {
+  width: 13rem;
+  background-color: white;
+  border-radius: 20px 0px 20px 0px;
+  box-shadow: 0 4px 8px 0 rgb(174, 174, 174);
+  margin: 1rem;
+  flex-grow: 1;
+}
+
+.img-news-famtrack {
+  border-radius: 20px 0px 0px 0px;
+}
+
+.news-list-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.news-card-text {
+  text-align: left;
+  padding: 5px;
+  font-size: smaller;
+}
+
+.news-title-famtrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.news-title-text-famtrack {
+  margin: 0;
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 650px) {
+  .news-list-famtrack {
+    margin-bottom: 5rem;
+  }
+}

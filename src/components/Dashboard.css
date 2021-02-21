@@ -1,0 +1,205 @@
+.map-famtrack {
+  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgb(189, 189, 189);
+  height: 85vh;
+  width: auto;
+}
+
+.dashboard-title-text-famtrack {
+  margin: 0;
+  font-weight: 200;
+}
+
+.dashboard-content-container-famtrack {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dashboard-detail-container-famtrack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  justify-content: start;
+}
+
+.dashboard-map-container-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0px;
+  border-radius: 20px;
+  margin: 0 1rem 1rem 0;
+  width: 100%;
+  flex: 4;
+}
+
+.dashboard-detail-container-famtrack {
+  flex: 2;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 0 1rem 1rem 0;
+}
+
+.admin-dashboard-famtrack {
+  position: absolute;
+  top: -1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 100px 20px 20px 100px;
+  width: 200px;
+}
+
+.people-dashboard-famtrack {
+  background-image: linear-gradient(to bottom right, #8FFF73 60%, #B2FF9E);
+  color: white;
+  padding: 10px;
+  width: 200px;
+  height: 120px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+
+.time-dashboard-famtrack {
+  background-image: linear-gradient(to bottom right, #D7C3FF, #C6ABFF);
+  color: white;
+  padding: 10px;
+  width: 200px;
+  height: 120px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  align-self: flex-end;
+  margin-top: 4rem;
+}
+
+.schedule-dashboard-famtrack {
+  background-image: linear-gradient(to bottom right, #FFBCBC, #FF9898);
+  color: white;
+  padding: 10px;
+  width: 90%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  align-self: center;
+  margin-top: 4rem;
+}
+
+.schedule-list-famtrack {
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #e9828282;
+  border-radius: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+@media only screen and (min-width: 1200px) {
+  .dashboard-map-container-famtrack {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0px;
+    border-radius: 20px;
+    margin: 0 1rem 1rem 0;
+    width: 100%;
+    flex: 5;
+  }
+  
+  .dashboard-detail-container-famtrack {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .map-famtrack {
+    margin: 0;
+    box-shadow: 0 4px 8px 0 rgb(189, 189, 189);
+    height: 60vh;
+    width: 100%;
+  }
+
+  .dashboard-content-container-famtrack {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .dashboard-map-container-famtrack {
+    background-color: none;
+    padding: 0;
+    border-radius: 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .dashboard-detail-container-famtrack {
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 2rem 1rem 4rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    order: 1;
+  }
+
+  .people-dashboard-famtrack {
+    background-image: linear-gradient(to bottom right, #8FFF73 60%, #B2FF9E);
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    order: 2;
+  }
+  
+  .time-dashboard-famtrack {
+    background-image: linear-gradient(to bottom right, #D7C3FF, #C6ABFF);
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: flex-end;
+    margin-top: 1rem;
+    order: 3;
+  }
+  
+  .schedule-dashboard-famtrack {
+    background-image: linear-gradient(to bottom right, #FFBCBC, #FF9898);
+    color: white;
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    align-self: center;
+    margin-top: 3rem;
+  }
+}
