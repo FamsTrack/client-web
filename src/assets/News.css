@@ -1,0 +1,148 @@
+@keyframes in {
+  from {
+    box-shadow: none;
+    border-radius: 20px 0px 20px 0px;
+  }
+  to {
+    box-shadow: 0 5px 10px 0 rgb(174, 174, 174);
+    border-radius: 20px 20px 20px 20px;
+  }
+}
+
+@keyframes out {
+  from {
+    box-shadow: 0 5px 10px 0 rgb(174, 174, 174);
+    border-radius: 20px 20px 20px 20px;
+  }
+  to {
+    box-shadow: none;
+    border-radius: 20px 0px 20px 0px;
+  }
+}
+
+.news-cars-container-famtrack {
+  width: auto;
+  background-color: white;
+  border-radius: 20px 0px 20px 0px;
+  box-shadow: none;
+  margin: 1rem;
+  animation-name: out;
+  animation-duration: 0.5s;
+}
+
+.news-cars-container-famtrack:hover {
+  box-shadow: 0 5px 10px 0 rgb(174, 174, 174);
+  border-radius: 20px 20px 20px 20px;
+  animation-name: in;
+  animation-duration: 0.5s;
+}
+
+.img-news-famtrack {
+  border-radius: 20px 0px 0px 0px;
+}
+
+.news-list-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 0 1rem 1rem 1rem;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.news-card-text {
+  text-align: left;
+  padding: 5px;
+  font-size: smaller;
+}
+
+.news-title-famtrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.news-title-text-famtrack {
+  margin: 0;
+  font-weight: 200;
+}
+
+@media only screen and (min-width: 1750px) {
+  .news-list-famtrack {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0 1rem 1rem 1rem;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 2040px) {
+  .news-list-famtrack {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0 1rem 1rem 1rem;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .news-marg-famtrack {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .news-list-famtrack {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0 1rem 1rem 1rem;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .news-list-famtrack {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0 1rem 1rem 1rem;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .news-list-famtrack {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0 1rem 1rem 1rem;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .news-list-famtrack {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 0 1rem 1rem 1rem;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto;
+  }
+}

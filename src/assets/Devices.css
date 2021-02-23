@@ -4,6 +4,78 @@ h2, h3, h4, h5, h6, p {
   font-weight: 300;
 }
 
+.device-card-hov-famtrack:hover {
+  box-shadow: 0 2px 8px 0 rgb(174, 174, 174);
+  padding: 10px;
+  border-radius: 5px;
+  animation-name: hoverCard;
+  animation-duration: 0.5s;
+}
+
+.device-detail-cont-famtrack {
+  animation-name: firstLoad;
+  animation-duration: 1s;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .device-detail-cont-famtrack {
+    animation-name: firstLoad;
+    animation-duration: 1s;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@keyframes firstLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.device-card-hov-famtrack {
+  box-shadow: none;
+  padding: 0px;
+  border-radius: 0px;
+  animation-name: reverseHovCard;
+  animation-duration: 0.5s;
+}
+
+@keyframes reverseHovCard {
+  from {
+    box-shadow: 0 4px 8px 0 rgb(174, 174, 174);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  to {
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+@keyframes hoverCard {
+  from {
+    box-shadow: none;
+    padding: 2px;
+    border-radius: 0;
+  }
+  to {
+    box-shadow: 0 2px 8px 0 rgb(174, 174, 174);
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
 .title-devices-famtrack {
   display: flex;
   width: auto;
@@ -31,7 +103,7 @@ h2, h3, h4, h5, h6, p {
 .device-list-row-famtrack {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 20rem 4rem 8rem 14rem;
+  grid-template-columns: 3fr 1fr 2fr 3fr;
   text-align: left;
   margin-top: 1rem;
 }
@@ -39,7 +111,7 @@ h2, h3, h4, h5, h6, p {
 .name-device-famtrack {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .age-device-famtrack {
@@ -67,6 +139,7 @@ h2, h3, h4, h5, h6, p {
 .img-devices-famtrack {
   border-radius: 50px;
   width: 80px;
+  height: 80px;
 }
 
 @media only screen and (min-width: 1500px) {
@@ -84,12 +157,13 @@ h2, h3, h4, h5, h6, p {
   .img-devices-famtrack {
     border-radius: 60px;
     width: 110px;
+    height: 110px;
   }
 
   .device-list-row-famtrack {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 27rem 11rem 15rem 22rem;
+    grid-template-columns: 3fr 1fr 2fr 3fr;
     text-align: left;
     margin-top: 1rem;
   }
@@ -115,12 +189,13 @@ h2, h3, h4, h5, h6, p {
   .img-devices-famtrack {
     border-radius: 60px;
     width: 60px;
+    height: 60px;
   }
 
   .device-list-row-famtrack {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 15rem 3rem 6rem 12rem;
+    grid-template-columns: 3fr 1fr 2fr 3fr;
     text-align: left;
     margin-top: 1rem;
   }
@@ -146,12 +221,13 @@ h2, h3, h4, h5, h6, p {
   .img-devices-famtrack {
     border-radius: 60px;
     width: 50px;
+    height: 50px;
   }
 
   .device-list-row-famtrack {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 13rem 2rem 4rem 10rem;
+    grid-template-columns: 3fr 1fr 2fr 3fr;
     text-align: left;
     margin-top: 1rem;
   }
@@ -162,7 +238,7 @@ h2, h3, h4, h5, h6, p {
   }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 760px) {
   h2, h3, h4, h5, h6, p {
     margin: 0;
     font-size: 10px;
@@ -170,19 +246,20 @@ h2, h3, h4, h5, h6, p {
   }
 
   .title-text-famtrack {
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
   }
 
   .img-devices-famtrack {
     border-radius: 60px;
     width: 50px;
+    height: 50px;
   }
 
   .device-list-row-famtrack {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 11rem 2rem 3rem 8rem;
+    grid-template-columns: 4fr 1fr 2fr 3fr;
     text-align: left;
     margin-top: 1rem;
   }
@@ -201,7 +278,7 @@ h2, h3, h4, h5, h6, p {
   }
 
   .title-text-famtrack {
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
   }
 
@@ -213,7 +290,7 @@ h2, h3, h4, h5, h6, p {
   .device-list-row-famtrack {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 10rem 1rem 2rem 6rem;
+    grid-template-columns: 4fr 1fr 2fr 3fr;
     text-align: left;
     margin-top: 1rem;
   }
@@ -221,6 +298,12 @@ h2, h3, h4, h5, h6, p {
   .family-color-famtrack {
     color: rgb(81, 154, 228);
     font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .devices-list-famtrack {
+    margin-bottom: 5rem;
   }
 }
 
@@ -234,12 +317,13 @@ h2, h3, h4, h5, h6, p {
   .img-devices-famtrack {
     border-radius: 60px;
     width: 60px;
+    height: 60px;
   }
 
   .device-list-row-famtrack {
     display: grid;
     justify-content: space-evenly;
-    grid-template-columns: 11rem 2rem;
+    grid-template-columns: 4fr 1fr;
     text-align: left;
     margin-top: 1rem;
   }
@@ -264,10 +348,6 @@ h2, h3, h4, h5, h6, p {
   .card-cont-famtrack {
     margin-top: -2rem;
   }
-
-  .devices-list-famtrack {
-    margin-bottom: 5rem;
-  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -288,7 +368,8 @@ h2, h3, h4, h5, h6, p {
     justify-content: left;
     grid-template-columns: 100%;
     width: auto;
-    margin: 1rem 1rem;
+    margin: 1rem;
+    margin-bottom: 5rem;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 1rem 0rem;
@@ -301,6 +382,6 @@ h2, h3, h4, h5, h6, p {
   .name-device-famtrack {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
 }

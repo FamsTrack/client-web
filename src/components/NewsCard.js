@@ -1,4 +1,4 @@
-import './News.css';
+import '../assets/News.css';
 
 function NewsCard() {
   return (
@@ -9,8 +9,8 @@ function NewsCard() {
         </div>
         <div>
           <div className="news-card-text">
-            <p style={{"margin": "3px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor arci, risus auctor felis.</p>
-            <p style={{"margin": "0"}}><i>Time</i></p>
+            <p style={{"margin": "3px", "fontSize": "15px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor arci, risus auctor felis.</p>
+            <p style={{"marginBottom": "2px", "marginLeft": "2px", "fontSize": "15px"}}><i>Time</i></p>
           </div>
         </div>
       </div>

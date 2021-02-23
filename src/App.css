@@ -55,6 +55,22 @@
 
 .content-container-famtrack {
   display: flex;
+  animation-name: firstLoad;
+  animation-duration: 2s;
+}
+
+.main-sub-div-famtrack {
+  animation-name: firstLoad;
+  animation-duration: 2s;
+}
+
+@keyframes firstLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .navbar-famtrack {
