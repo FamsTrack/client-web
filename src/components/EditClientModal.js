@@ -23,7 +23,7 @@ const EditClientModal = (props) => {
   return (
     <div>
       <a onClick={toggle} className="btn btn-warning m-2">Edit</a>
-      <Modal style={{"maxWidth": "800px", "padding": "5px"}} isOpen={modal} toggle={toggle} className={className} external={externalCloseBtn}>
+      <Modal style={{"maxWidth": "800px", "padding": "5px", "fontFamily": "'Poppins'"}} isOpen={modal} toggle={toggle} className={className} external={externalCloseBtn}>
         <ModalHeader><h1 style={{"marginLeft": "20px"}}>Edit</h1></ModalHeader>
         <ModalBody>
           <Form>

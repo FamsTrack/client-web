@@ -1,5 +1,12 @@
-import NewsCard from "./NewsCard";
 import '../assets/News.css';
+import {
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
+import NewsList from "./NewsList";
+import NewsDetail from "./NewsDetail";
+import AddNewsModal from './AddNewsModal';
 
 function News() {
   return (
@@ -7,18 +14,16 @@ function News() {
       <div className="news-marg-famtrack">
         <div className="news-title-famtrack">
           <h1 className="news-title-text-famtrack">News</h1>
-          <button className="btn add-button-famtrack">Add</button>
+          <AddNewsModal />
         </div>
-        <div className='news-list-famtrack'>
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-        </div>
+        <Switch>
+          <Route path='/news/:id'>
+            <NewsDetail />
+          </Route>
+          <Route path='/news'>
+            <NewsList />
+          </Route>
+        </Switch>
       </div>
     </div>
   );

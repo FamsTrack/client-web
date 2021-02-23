@@ -1,9 +1,9 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText, Col } from 'reactstrap';
 
-const AddClientModal = (props) => {
+const EditNewsModal = (props) => {
   const {
     className,
     client
@@ -22,9 +22,9 @@ const AddClientModal = (props) => {
   const externalCloseBtn = <button className="close" style={{ position: 'absolute', top: '15px', right: '15px' }} onClick={toggle}>&times;</button>;
   return (
     <div>
-      <button onClick={toggle} className="btn add-button-famtrack">Add</button>
-      <Modal style={{"maxWidth": "800px", "padding": "5px", "fontFamily": "'Poppins'"}} isOpen={modal} toggle={toggle} className={className} external={externalCloseBtn}>
-        <ModalHeader><h1 style={{"marginLeft": "20px"}}>Add</h1></ModalHeader>
+      <a onClick={toggle} className="btn btn-warning">Edit</a>
+      <Modal style={{ "maxWidth": "800px", "padding": "5px", "fontFamily": "'Poppins'" }} isOpen={modal} toggle={toggle} className={className} external={externalCloseBtn}>
+        <ModalHeader><h1 style={{ "marginLeft": "20px" }}>Add</h1></ModalHeader>
         <ModalBody>
           <Form>
             <FormGroup>
@@ -38,16 +38,11 @@ const AddClientModal = (props) => {
                 onChange={e => setName(e.target.value)}
               />
             </FormGroup>
-            <FormGroup>
-              <Label for="exampleAddress">Address</Label>
-              <Input
-                type="text"
-                name="email"
-                id="exampleAddress"
-                placeholder="Address"
-                value={address}
-                onChange={e => setAddress(e.target.value)}
-              />
+            <FormGroup row className="mt-3">
+              <Label for="exampleText" sm={2}>Description</Label>
+              <Col sm={10}>
+                <Input type="textarea" name="text" id="exampleText" />
+              </Col>
             </FormGroup>
             <FormGroup>
               <Label for="exampleUrl">Image</Label>
@@ -61,30 +56,10 @@ const AddClientModal = (props) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="exampleNumber">Contact</Label>
-              <Input
-                type="number"
-                name="number"
-                id="exampleNumber"
-                placeholder="Contact"
-                value={contact}
-                onChange={e => setContact(e.target.value)}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="exampleDate">Birth Date</Label>
-              <Input
-                type="date"
-                name="date"
-                id="exampleDate"
-                placeholder="Birth Date"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="exampleSelect">Gender</Label>
+              <Label for="exampleSelect">Active</Label>
               <Input type="select" name="select" id="exampleSelect" value={gender}>
-                <option value="Pria">Pria</option>
-                <option value="Wanita">Wanita</option>
+                <option value="Pria">True</option>
+                <option value="Wanita">False</option>
               </Input>
             </FormGroup>
             <button className="btn btn-primary m-3" type="submit">Submit</button>
@@ -98,4 +73,4 @@ const AddClientModal = (props) => {
   );
 }
 
-export default AddClientModal;
+export default EditNewsModal;

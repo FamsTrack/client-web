@@ -35,10 +35,10 @@ function DeviceDetail() {
         <a style={{ "color": "#6c8590" }} onClick={e => history.push('/devices')}>Back</a>
       </div>
       <div className="d-flex flex-column flex-md-row">
-        <div style={{ "display": "flex", "justifyContent": "center" }} className="mb-3">
-          <img src={client.img} style={{ "borderRadius": "10px", "maxWidth": "400px", "minWidth": "100px" }} />
+        <div style={{ "display": "flex", "justifyContent": "center", "flex": "1" }} className="mb-3">
+          <img src={client.img} style={{ "borderRadius": "10px", "maxWidth": "380px", "minWidth": "100px" }} />
         </div>
-        <div className="d-flex flex-column align-items-start p-3">
+        <div className="d-flex flex-column align-items-start p-3 p-md-5" style={{"flex": "1"}}>
           <h1 className="mb-3">{client.name}</h1>
           <div className="d-flex align-items-start flex-column">
             <h3>Birth Date: {client.birth_date}</h3>
@@ -49,8 +49,8 @@ function DeviceDetail() {
         </div>
       </div>
       <div className="d-flex flex-column align-items-start">
-        <FamiliesModal />
-        <DeviceModal device={client} />
+        <FamiliesModal family={client.familiesId} />
+        <DeviceModal device={client.device} />
       </div>
       <div style={{"display": "flex", "justifyContent": "flex-end"}}>
         <EditClientModal client={client} />

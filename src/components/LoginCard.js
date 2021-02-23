@@ -16,11 +16,11 @@ function LoginCard({ setVisible }) {
     try {
       e.preventDefault();
 
-      let res = await axios.post('http://localhost:3000/login', {
+      let res = await axios.post('http://localhost:3000/weblogin', {
         email,
         password
       })
-
+      
       localStorage.setItem('access_token', res.data.access_token);
       history.push('/');
     } catch (err) {

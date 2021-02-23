@@ -8,6 +8,7 @@ import {
   useRouteMatch
 } from 'react-router-dom';
 import AddClientModal from './AddClientModal';
+import AddDeviceModal from './AddDeviceModal';
 
 function Devices() {
   const {
@@ -19,7 +20,10 @@ function Devices() {
     <div style={{ "height": "100vh", "overflow": "auto" }} className="main-sub-div-famtrack">
       <div className="title-devices-famtrack">
         <h1 style={{"fontWeight": "200", "margin": "0"}}>Clients</h1>
-        <AddClientModal />
+        <div style={{"display": "flex"}}>
+          <AddClientModal />
+          <AddDeviceModal />
+        </div>
       </div>
       <Switch>
         <Route path="/devices/:id">

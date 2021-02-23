@@ -39,7 +39,7 @@ function Content() {
   }
 
   return (
-    <div className="row" style={{ "backgroundImage": "linear-gradient(to bottom right, #FFFFFF, #8BE3FF)" }}>
+    <div className="row" style={{ "backgroundImage": "linear-gradient(to bottom right, #FFFFFF, rgb(157 247 172))" }}>
       <div className="content-container-famtrack">
         <Navbar style={{"flex": "1"}} />
         <div style={{"flex": "2"}}>

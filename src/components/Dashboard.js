@@ -8,7 +8,7 @@ function Dashboard() {
   } = useSelector(state => state.baseResolver);
 
   return (
-    <div style={{ "height": "100vh", "overflow": "auto" }} className="main-sub-div-famtrack">
+    <div style={{ "minHeight": "100vh", "overflow": "auto" }} className="main-sub-div-famtrack">
       <div style={{ "display": "flex", "alignItems": "center", "justifyContent": "left", "padding": "2rem 2rem 1rem 2rem" }}>
         <h1 className="dashboard-title-text-famtrack">Dashboard</h1>
       </div>

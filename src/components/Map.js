@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import '../assets/Dashboard.css';
 import { useSelector } from 'react-redux';
@@ -9,33 +9,64 @@ const AnyReactComponent = ({ text, image }) => <div style={{"display": "flex", "
 </div>;
 
 function Map() {
-  const [center, setCenter] = useState({
-    lat: 39.82456281213858,
-    lng: 21.435957167256333
-  });
   const [zoom, setZoom] = useState(11);
   const {
     baseData
   } = useSelector(state => state.baseResolver);
+  const [search, setSearch] = useState('');
+  const [centered, setCentered] = useState(null);
+  const [center, setCenter] = useState({
+    lat: baseData[0]?.device.latitude,
+    lng: baseData[0]?.device.longitude
+  });
+
+  useEffect(() => {
+    setCenter({
+      lat: baseData[0]?.device.latitude,
+      lng: baseData[0]?.device.longitude
+    });
+  }, [baseData[0]?.device]);
+
+  const handleChange = async () => {
+    try {
+      await setCentered(baseData.filter(e => new RegExp(search, "i").exec(e.name)));
+      
+      setCenter({
+        lat: centered[0].device.latitude,
+        lng: centered[0].device.longitude
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <div className="map-famtrack">
+      <div class="form-floating">
+        <input type="text" value={search} class="form-control" id="floatingInput" placeholder="Search" autoComplete="off" onChange={e => {
+          setSearch(e.target.value);
+          handleChange();
+        }} />
+        <label for="floatingInput">Search</label>
+      </div>
       <GoogleMapReact
         bootstrapURLKeys={{ key: '' }}
-        defaultCenter={center}
-        defaultZoom={zoom}
+        center={center}
+        zoom={zoom}
       >
         {
           baseData.map(e => {
-            return (
-              <AnyReactComponent
-                lat={e.device.latitude}
-                lng={e.device.longitude}
-                text={e.name}
-                key={e.id}
-                image={e.img}
-              />
-            )
+            if (e.device) {
+              return (
+                <AnyReactComponent
+                  lat={e.device.latitude}
+                  lng={e.device.longitude}
+                  text={e.name}
+                  key={e.id}
+                  image={e.img}
+                />
+              )
+            }
           })
         }
       </GoogleMapReact>

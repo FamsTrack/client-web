@@ -1,4 +1,11 @@
 import '../assets/Groups.css';
+import {
+  Link,
+  Route,
+  Switch
+} from 'react-router-dom';
+import GroupsList from './GroupsList';
+import GroupDetail from './GroupDetail';
 
 function Groups() {
   return (
@@ -7,14 +14,14 @@ function Groups() {
         <h1 style={{"fontWeight": "200"}}>Groups</h1>
         <button className="btn add-button-famtrack">Add</button>
       </div>
-      <div className="groups-container-famtrack">
-        <div className="groups-list-famtrack">
-          <h1>Test</h1>
-        </div>
-        <div className="ungrouped-list-famtrack">
-          <h1>Test</h1>
-        </div>
-      </div>
+      <Switch>
+        <Route path="/groups/:id">
+          <GroupDetail />
+        </Route>
+        <Route path="/groups">
+          <GroupsList />
+        </Route>
+      </Switch>
     </div>
   );
 }

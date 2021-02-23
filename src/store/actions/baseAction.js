@@ -9,10 +9,10 @@ export const fetchBaseData = () => {
         type: "SET_LOADING",
         payload: true
       });
-
+      
       let payload = await axios.get(`${url}/clients`, {
         headers: {
-          access_token
+          access_token: localStorage.access_token
         }
       });
       payload = payload.data;
@@ -76,6 +76,27 @@ export const fetchClient = (id) => {
       return dispatch({
         type: "SET_LOADING_CLIENT",
         payload: false
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+}
+
+export const socketMap = (device) => {
+  return async (dispatch, getState) => {
+    try {
+      const newData = getState().baseResolver.baseData;
+      
+      newData.forEach(e => {
+        if (device.arduinoUniqueKey === e.device.arduinoUniqueKey) {
+          e.device = device;
+        }
+      });
+      
+      await dispatch({
+        type: "FETCH_BASE_DATA",
+        payload: newData
       });
     } catch (err) {
       console.log(err);

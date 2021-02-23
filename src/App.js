@@ -6,8 +6,26 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { useEffect } from 'react';
+import { io } from "socket.io-client";
+import { useDispatch } from 'react-redux';
+import { socketMap } from './store/actions/baseAction';
+const ENDPOINT = "http://localhost:3000"; //https://aad5dee52c8d.ngrok.io
 
 function App() {
+  const socket = io(ENDPOINT, {
+    transports: ['websocket']
+  });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    socket.on("data:device", data => {
+      dispatch(socketMap(data));
+    });
+    // CLEAN UP THE EFFECT
+    return () => socket.disconnect();
+  }, []);
+
   return (
     <div className="App">
       <Router>
