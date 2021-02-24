@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url = "http://localhost:3000";
+const url = "https://famstrack.herokuapp.com";
 
 export const fetchNews = () => {
   return async (dispatch) => {

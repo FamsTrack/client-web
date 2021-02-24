@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url = 'http://localhost:3000';
+const url = 'https://famstrack.herokuapp.com';
 const access_token = localStorage.access_token;
 
 export const fetchDevices = () => {
