@@ -10,7 +10,7 @@ export const fetchUsers = () => {
         payload: true
       });
 
-      let payload = await axios.get(`${url}/user`, {
+      let payload = await axios.get(`${url}/families`, {
         headers: {
           access_token
         }

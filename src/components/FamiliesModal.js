@@ -1,8 +1,10 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { useParams } from 'react-router';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
 import { fetchFamilies, fetchUsers } from '../store/actions/familiesAction';
 
 const FamiliesModal = (props) => {
@@ -11,18 +13,46 @@ const FamiliesModal = (props) => {
     family
   } = props;
   const dispatch = useDispatch();
+  const { id } = useParams();
   const { users, families, loadingFamily } = useSelector(state => state.familiesResolver);
+  const { client } = useSelector(state => state.baseResolver);
   const [modal, setModal] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+  const [familiesId, setFamiliesId] = useState(family);
 
   const toggle = () => {
     setModal(!modal)
     
     if (family) {
-      dispatch(fetchFamilies(family));
-    } else {
-      dispatch(fetchUsers());
+      dispatch(fetchFamilies(familiesId));
     }
+
+    dispatch(fetchUsers());
   };
+
+  const handleChange = async (e) => {
+    try {
+      e.preventDefault();
+      console.log(client);
+      await axios.put(`http://localhost:3000/clients/${id}`, {
+        name: client.name,
+        img: client.img,
+        address: client.address,
+        gender: client.gender,
+        birth_date: client.birth_date,
+        contact: client.contact,
+        familiesId
+      }, {
+        headers: {
+          access_token: localStorage.access_token
+        }
+      });
+
+      dispatch(fetchFamilies(familiesId));
+    } catch (err) {
+      console.log(err.response);
+    }
+  }
   
   const externalCloseBtn = <button className="close" style={{ position: 'absolute', top: '15px', right: '15px' }} onClick={toggle}>&times;</button>;
   
@@ -43,8 +73,31 @@ const FamiliesModal = (props) => {
                 <h3 style={{"fontSize": "15px", "margin": "10px"}}>{families.user.email}</h3>
                 <h3 style={{"fontSize": "20px"}}>Address</h3>
                 <h3 style={{"fontSize": "15px", "margin": "10px"}}>{families.address}</h3>
-                <a className="btn btn-secondary mt-3">Change</a>
-              </div> : <div>Yaaa</div>)
+                {
+                  !dropdown ? <a className="btn btn-secondary mt-3" onClick={() => setDropdown(true)}>Change</a> : <Form className="m-2" onSubmit={handleChange}>
+                  <FormGroup>
+                    <Label for="exampleSelect">User</Label>
+                    <Input type="select" name="select" id="exampleSelect" value={familiesId} onChange={e => setFamiliesId(e.target.value)}>
+                      <option value=""></option>
+                      {
+                        users.map(user => {
+                          return <option value={user.id}>{user.name}</option>
+                        })
+                      }
+                    </Input>
+                    <div>
+                      <button className="btn btn-primary m-2 mt-3" type="submit">Change</button>
+                      <a className="btn btn-secondary m-2 mt-3" onClick={() => setDropdown(false)}>Cancel</a>
+                    </div>
+                  </FormGroup>
+                </Form>
+                }
+                
+              </div>
+               : <div className="d-flex align-items-center">
+                <h3 style={{"fontSize": "20px", "fontWeight": "300"}}>No Family Yet</h3>
+                <button className="btn btn-primary ms-3">Add</button>
+              </div>)
           }
         </ModalBody>
         <ModalFooter>

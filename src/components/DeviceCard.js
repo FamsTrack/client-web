@@ -12,14 +12,14 @@ function DeviceVard({ data }) {
     <div className="device-list-row-famtrack device-card-hov-famtrack" onClick={() => handleDetail(data.id)}>
       <div className="name-device-famtrack">
         <div>
-          <img className="img-devices-famtrack" src={data.img} />
+          <img className="img-devices-famtrack" src={typeof data.img === 'string' ? data.img : 'http://www.beautifulpeople.com/cdn/beautifulpeople/images/default_profile/signup_male.png'} />
         </div>
         <div>
           <h3 style={{"marginLeft": "20px"}}>{data.name}</h3>
         </div>
       </div>
       <div className="age-device-famtrack">
-        <h3>{data.device.arduinoUniqueKey}</h3>
+        <h3>{data.device?.arduinoUniqueKey || 'Not Connected'}</h3>
       </div>
       <div className="contact-device-famtrack">
         <h3>

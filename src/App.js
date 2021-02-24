@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 import { io } from "socket.io-client";
 import { useDispatch } from 'react-redux';
 import { socketMap } from './store/actions/baseAction';
-const ENDPOINT = "https://c11d32085703.ngrok.io/"; //http://localhost:3000
+const ENDPOINT = "http://localhost:3000"; //https://c11d32085703.ngrok.io/
 
 function App() {
   const socket = io(ENDPOINT, {
