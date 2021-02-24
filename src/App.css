@@ -1,0 +1,176 @@
+.App {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #396C82;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+.nav-btn-famtrack {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #959595;
+  margin: 1rem 0;
+  animation-name: nav-btn-deactivated;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+.nav-btn-famtrack-active {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #396C82;
+  margin: 1rem 0;
+  box-shadow: 0 6px 10px 0 gray;
+  animation-name: nav-btn-activated;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+.logout-btn-famtrack:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.add-button-famtrack {
+  background-color: #396C82;
+  color: white;
+  border-radius: 70px;
+  padding: 5px 15px;
+}
+
+.add-button-famtrack:hover {
+  box-shadow: 0 4px 8px 0 rgb(155, 155, 155);
+}
+
+.content-container-famtrack {
+  display: flex;
+  animation-name: firstLoad;
+  animation-duration: 2s;
+}
+
+.main-sub-div-famtrack {
+  animation-name: firstLoad;
+  animation-duration: 2s;
+}
+
+@keyframes firstLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar-famtrack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 1rem;
+}
+
+@keyframes nav-btn-activated {
+  from {
+    color: #959595;
+    box-shadow: 0 0 0 0 gray;
+  }
+  to {
+    color: #396C82;
+    box-shadow: 0 6px 10px 0 gray;
+  }
+}
+
+@keyframes nav-btn-deactivated {
+  from {
+    color: #396C82;
+    box-shadow: 0 6px 10px 0 gray;
+  }
+  to {
+    color: #959595;
+    box-shadow: 0 0 0 0 gray;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .App {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #396C82;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .content-container-famtrack {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+
+  .navbar-famtrack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    min-height: 0;
+    background-color: white;
+  }
+
+  .nav-btn-famtrack-active {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #396C82;
+    margin: 1rem 0;
+    box-shadow: 0 6px 10px 0 gray;
+    animation-name: nav-btn-activated;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+
+  .router-farmtrack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 84%;
+  }
+
+  .nav-btn-famtrack {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #959595;
+    margin: 1rem 0;
+    animation-name: nav-btn-deactivated;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+  }
+}

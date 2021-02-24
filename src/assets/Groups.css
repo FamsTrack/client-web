@@ -1,0 +1,37 @@
+.groups-title-famtrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.groups-container-famtrack {
+  display: flex;
+  justify-content: center;
+}
+
+.groups-list-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  flex: 3;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+}
+
+.ungrouped-list-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  flex: 2;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  margin-right: 2rem;
+  margin-left: 0;
+  text-align: start;
+}
+
+.groups-detail-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 0 1rem 1rem 1rem;
+}
