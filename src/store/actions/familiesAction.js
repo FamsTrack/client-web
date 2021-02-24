@@ -1,6 +1,6 @@
 import axios from 'axios';
 const access_token = localStorage.access_token;
-const url = 'http://localhost:3000';
+const url = 'https://famstrack.herokuapp.com';
 
 export const fetchUsers = () => {
   return async (dispatch) => {
