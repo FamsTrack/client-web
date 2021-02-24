@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import Map from './Map';
+import Clock from 'react-live-clock';
 
 function Dashboard() {
   const {
@@ -27,8 +28,8 @@ function Dashboard() {
             </svg>
           </div>
           <div className="time-dashboard-famtrack">
-            <h3 style={{ "margin": "0", "fontSize": "25px", "fontWeight": "300" }}>18 : 20</h3>
-            <p style={{ "margin": "0" }}><i>Monday, 19 feb 2021</i></p>
+            <h3 style={{ "margin": "0", "fontSize": "25px", "fontWeight": "300" }}><Clock ticking={true} timezone={'Asia/Riyadh'} /></h3>
+            <p style={{ "margin": "0" }}><i><Clock format={'dddd, MMMM Do YYYY'}/></i></p>
           </div>
           <div className="schedule-dashboard-famtrack">
             <h3 style={{ "margin": "0", "fontSize": "25px", "fontWeight": "500" }}>Schedule</h3>
