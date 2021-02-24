@@ -31,12 +31,12 @@ function Login() {
             {errorLogin}
           </Alert> : ''
       }
-      <div className="row mt-5 mt-md-0" style={{ "backgroundColor": "#F9FEFE", "minHeight": "100vh", "display": "flex", "alignItems": "center" }}>
+      <div className="row mt-5 mt-md-0" style={{ "backgroundColor": "rgb(220 255 231)", "minHeight": "100vh", "display": "flex", "alignItems": "center" }}>
         <div className="col-lg-1"></div>
         <div className="col-lg-10">
           <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
             <div style={{ "flex": "8" }}>
-              <img className="container" src="https://i.ibb.co/V9GXxG8/Fams-Track-s-2-removebg-preview.png" width="auto" style={{ "maxWidth": "400px" }} />
+              <img className="container" src="https://i.ibb.co/wSH72xV/My-Post.png" width="auto" style={{ "maxWidth": "400px", "borderRadius": "500px" }} />
             </div>
             <div className="container pt-md-5 mt-md-5" style={{ "flex": "4" }}>
               <h2 style={{"fontSize": "25px"}} className="p-3">Welcome Back!</h2>

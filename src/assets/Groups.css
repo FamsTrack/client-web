@@ -12,7 +12,7 @@
 
 .groups-list-famtrack {
   background-color: rgba(255, 255, 255, 0.5);
-  flex: 8;
+  flex: 3;
   border-radius: 20px;
   padding: 1rem 2rem;
   margin: 1rem;
@@ -26,4 +26,12 @@
   margin: 1rem;
   margin-right: 2rem;
   margin-left: 0;
+  text-align: start;
+}
+
+.groups-detail-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 0 1rem 1rem 1rem;
 }

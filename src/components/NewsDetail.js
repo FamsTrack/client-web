@@ -26,14 +26,14 @@ function NewsDetail () {
   }
 
   return (
-    <div>
+    <div className="news-detail-famtrack">
       <div>
         <a style={{"color": "#6c8590"}} onClick={() => history.push('/news')}>Back</a>
       </div>
-      <div className="d-flex flex-column align-items-start p-5">
+      <div className="d-flex flex-column align-items-start p-3">
         <h1 style={{"fontSize": "30px"}} className="mb-3">{newsById.name}</h1>
-        <img src={newsById.image} style={{"alignSelf": "center"}} className="mb-3" />
-        <h3 className="mb-3" style={{"alignItems": "flex-start"}}>{newsById.description}</h3>
+        <img src={newsById.image} style={{"alignSelf": "center", "width": "100%"}} className="mb-3" />
+        <h3 className="mb-3" style={{"alignItems": "flex-start", "fontSize": "15px"}}>{newsById.description}</h3>
         <div className="p-3 d-flex">
           <EditNewsModal />
           <a className="btn btn-danger ms-3">Delete</a>

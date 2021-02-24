@@ -46,11 +46,11 @@ function DeviceDetail() {
             <h3>Gender: {client.gender}</h3>
             <h3>Adress: {client.address}</h3>
           </div>
+          <div className="d-flex flex-column align-items-start mt-3">
+            <FamiliesModal family={client.familiesId} />
+            <DeviceModal device={client.device} />
+          </div>
         </div>
-      </div>
-      <div className="d-flex flex-column align-items-start">
-        <FamiliesModal family={client.familiesId} />
-        <DeviceModal device={client.device} />
       </div>
       <div style={{"display": "flex", "justifyContent": "flex-end"}}>
         <EditClientModal client={client} />

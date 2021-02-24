@@ -32,7 +32,7 @@ function Content() {
 
   if (loading) {
     return (
-      <div style={{ "backgroundImage": "linear-gradient(to bottom right, #FFFFFF, #8BE3FF)", "minHeight": "100vh", "display": "flex", "alignItems": "center", "justifyContent": "center" }}>
+      <div style={{ "backgroundImage": "linear-gradient(to bottom right, #FFFFFF, rgb(157 247 172))", "minHeight": "100vh", "display": "flex", "alignItems": "center", "justifyContent": "center" }}>
         <h1>Loading...</h1>
       </div>
     );

@@ -1,6 +1,6 @@
 .map-famtrack {
   margin: 1rem;
-  box-shadow: 0 4px 8px 0 rgb(189, 189, 189);
+  box-shadow: none;
   height: 75vh;
   width: auto;
 }

@@ -24,7 +24,7 @@ function Navbar() {
       <div className="navbar-famtrack">
         <div className="router-farmtrack">
           <div>
-            <img src="https://i.ibb.co/V9GXxG8/Fams-Track-s-2-removebg-preview.png" width="auto" style={{ "maxWidth": "60px" }} />
+            <img src="https://i.ibb.co/wSH72xV/My-Post.png" width="auto" style={{ "maxWidth": "70px", "borderRadius": "40px" }} />
           </div>
           <Link to="/" className={ pathName == "/" ? "nav-btn-famtrack-active" : "nav-btn-famtrack"} onClick={() => handleChangePathName('/')}>
             <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" fill="currentColor" className="bi bi-house-door" viewBox="0 0 16 16">

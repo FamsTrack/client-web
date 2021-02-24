@@ -51,6 +51,13 @@
   grid-template-columns: auto auto auto auto auto;
 }
 
+.news-detail-famtrack {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 0 1rem 1rem 1rem;
+}
+
 .news-card-text {
   text-align: left;
   padding: 5px;

@@ -14,17 +14,28 @@ function Map() {
     baseData
   } = useSelector(state => state.baseResolver);
   const [search, setSearch] = useState('');
-  const [centered, setCentered] = useState(null);
+  const [centered, setCentered] = useState(baseData[0]);
   const [center, setCenter] = useState({
     lat: baseData[0]?.device.latitude,
     lng: baseData[0]?.device.longitude
   });
 
-  useEffect(() => {
-    setCenter({
-      lat: baseData[0]?.device.latitude,
-      lng: baseData[0]?.device.longitude
-    });
+  useEffect(async () => {
+    try {
+      setCenter({
+        lat: baseData[0]?.device.latitude,
+        lng: baseData[0]?.device.longitude
+      });
+  
+      await setCentered(baseData.filter(e => e.id === centered.id));
+      console.log(centered);
+      setCenter({
+        lat: centered[0].device.latitude,
+        lng: centered[0].device.longitude
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }, [baseData[0]?.device]);
 
   const handleChange = async () => {
