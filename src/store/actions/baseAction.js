@@ -1,6 +1,6 @@
 import axios from 'axios';
 const access_token = localStorage.access_token;
-const url = 'http://localhost:3000';
+const url = 'https://famstrack.herokuapp.com';
 
 export const fetchBaseData = () => {
   return async (dispatch) => {
@@ -63,7 +63,7 @@ export const fetchClient = (id) => {
 
       let payload = await axios.get(`${url}/clients/${id}`, {
         headers: {
-          access_token
+          access_token: localStorage.access_token
         }
       });
       payload = payload.data;

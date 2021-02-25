@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url = 'http://localhost:3000';
+const url = 'https://famstrack.herokuapp.com';
 const access_token = localStorage.access_token;
 
 export const fetchGroups = () => {
@@ -12,7 +12,7 @@ export const fetchGroups = () => {
 
       let payload = await axios.get(`${url}/groups`, {
         headers: {
-          access_token
+          access_token: localStorage.access_token
         }
       });
       payload = payload.data
@@ -42,7 +42,7 @@ export const fetchGroup = (id) => {
 
       let payload = await axios.get(`${url}/groups/${id}`, {
         headers: {
-          access_token
+          access_token: localStorage.access_token
         }
       });
       payload = payload.data

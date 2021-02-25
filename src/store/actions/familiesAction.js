@@ -1,6 +1,6 @@
 import axios from 'axios';
 const access_token = localStorage.access_token;
-const url = 'http://localhost:3000';
+const url = 'https://famstrack.herokuapp.com';
 
 export const fetchUsers = () => {
   return async (dispatch) => {
@@ -59,5 +59,14 @@ export const fetchFamilies = (id) => {
     } catch (err) {
       console.log(err);
     }
+  }
+}
+
+export const clearFamilies = () => {
+  return async (dispatch) => {
+    return dispatch({
+      type: 'FETCH_FAMILIES',
+      payload: {}
+    });
   }
 }

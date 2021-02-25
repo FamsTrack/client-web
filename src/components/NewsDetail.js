@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
-import { fetchNewsById } from "../store/actions/newsAction";
+import { fetchNews, fetchNewsById } from "../store/actions/newsAction";
 import EditNewsModal from "./EditNewsModal";
+import axios from 'axios';
+import swal from 'sweetalert';
 
 function NewsDetail () {
   const dispatch = useDispatch();
@@ -16,6 +18,31 @@ function NewsDetail () {
   useEffect(() => {
     dispatch(fetchNewsById(id));
   }, []);
+
+  const handleDelete = async () => {
+    try {
+      let willDelete = await swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover it again!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      
+      if (willDelete) {
+        await axios.delete(`https://famstrack.herokuapp.com/news/${id}`, {
+          headers: {
+            access_token: localStorage.access_token
+          }
+        });
+        
+        dispatch(fetchNews());
+        history.push('/news');
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   if (loadingNews) {
     return (
@@ -35,8 +62,8 @@ function NewsDetail () {
         <img src={newsById.image} style={{"alignSelf": "center", "width": "100%"}} className="mb-3" />
         <h3 className="mb-3" style={{"alignItems": "flex-start", "fontSize": "15px"}}>{newsById.description}</h3>
         <div className="p-3 d-flex">
-          <EditNewsModal />
-          <a className="btn btn-danger ms-3">Delete</a>
+          <EditNewsModal data={newsById}/>
+          <a className="btn btn-danger ms-3" onClick={handleDelete}>Delete</a>
         </div>
       </div>
     </div>
