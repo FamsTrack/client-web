@@ -34,7 +34,7 @@ const FamiliesModal = (props) => {
     try {
       e.preventDefault();
       console.log(client);
-      await axios.put(`http://localhost:3000/clients/${id}`, {
+      await axios.put(`https://famstrack.herokuapp.com/clients/${id}`, {
         name: client.name,
         img: client.img,
         address: client.address,

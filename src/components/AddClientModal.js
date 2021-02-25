@@ -29,7 +29,7 @@ const AddClientModal = (props) => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      await axios.post('http://localhost:3000/clients', {
+      await axios.post('https://famstrack.herokuapp.com/clients', {
         name,
         img: image,
         address,

@@ -36,7 +36,7 @@ function DeviceDetail() {
       })
       
       if (willDelete) {
-        await axios.delete(`http://localhost:3000/clients/${id}`, {
+        await axios.delete(`https://famstrack.herokuapp.com/clients/${id}`, {
           headers: {
             access_token: localStorage.access_token
           }
