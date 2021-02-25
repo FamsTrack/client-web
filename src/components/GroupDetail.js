@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
-import { fetchGroup } from "../store/actions/groupsAction";
+import { fetchGroups, fetchGroup } from "../store/actions/groupsAction";
+import EditGroupModal from "./EditGroupModal";
+import swal from 'sweetalert';
+import axios from "axios";
 
 function GroupDetail () {
   const {
@@ -15,6 +18,31 @@ function GroupDetail () {
   useEffect(() => {
     dispatch(fetchGroup(id));
   }, []);
+
+  const handleDelete = async () => {
+    try {
+      let willDelete = await swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover it again!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      
+      if (willDelete) {
+        await axios.delete(`https://famstrack.herokuapp.com/groups/${id}`, {
+          headers: {
+            access_token: localStorage.access_token
+          }
+        });
+        
+        dispatch(fetchGroups());
+        history.push('/groups');
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   if (loadingGroup) {
     return (
@@ -53,8 +81,8 @@ function GroupDetail () {
       <div style={{"alignSelf": "flex-end"}}>
         <a className="btn btn-primary" style={{"marginRight": "1rem"}}>Schedule</a>
         <a className="btn btn-success" style={{"marginRight": "1rem"}}>Add Member</a>
-        <a className="btn btn-warning" style={{"marginRight": "1rem"}}>Edit</a>
-        <a className="btn btn-danger">Delete</a>
+        <EditGroupModal group={group}/>
+        <a className="btn btn-danger" onClick={handleDelete}>Delete</a>
       </div>
     </div>
   );

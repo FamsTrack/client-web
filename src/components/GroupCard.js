@@ -7,7 +7,7 @@ function GroupCard (props) {
     id
   } = props.group;
   const history = useHistory();
-
+  console.log(props.group);
   return (
     <div className="d-flex justify-content-between align-items-center mb-3" onClick={() => history.push(`/groups/${id}`)}>
       <h3>{name}</h3>
