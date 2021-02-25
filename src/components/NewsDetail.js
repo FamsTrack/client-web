@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
-import { fetchNewsById } from "../store/actions/newsAction";
+import { fetchNews, fetchNewsById } from "../store/actions/newsAction";
 import EditNewsModal from "./EditNewsModal";
 import swal from 'sweetalert';
-import axios from "axios";
-import { fetchBaseData } from "../store/actions/baseAction";
+import axios from 'axios';
 
 function NewsDetail () {
   const dispatch = useDispatch();
@@ -37,7 +36,7 @@ function NewsDetail () {
           }
         });
         
-        dispatch(fetchBaseData());
+        dispatch(fetchNews());
         history.push('/news');
       }
     } catch (err) {
@@ -63,7 +62,7 @@ function NewsDetail () {
         <img src={newsById.image} style={{"alignSelf": "center", "width": "100%"}} className="mb-3" />
         <h3 className="mb-3" style={{"alignItems": "flex-start", "fontSize": "15px"}}>{newsById.description}</h3>
         <div className="p-3 d-flex">
-          <EditNewsModal />
+          <EditNewsModal data={newsById}/>
           <a className="btn btn-danger ms-3" onClick={handleDelete}>Delete</a>
         </div>
       </div>

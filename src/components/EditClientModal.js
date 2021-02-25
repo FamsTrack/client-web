@@ -35,7 +35,7 @@ const EditClientModal = (props) => {
     try {
       e.preventDefault();
 
-      await axios.put(`http://localhost:3000/clients/${client.id}`, {
+      await axios.put(`https://famstrack.herokuapp.com/clients/${client.id}`, {
         name,
         img: image,
         address,

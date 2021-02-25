@@ -61,3 +61,12 @@ export const fetchFamilies = (id) => {
     }
   }
 }
+
+export const clearFamilies = () => {
+  return async (dispatch) => {
+    return dispatch({
+      type: 'FETCH_FAMILIES',
+      payload: {}
+    });
+  }
+}

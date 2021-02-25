@@ -63,7 +63,7 @@ export const fetchClient = (id) => {
 
       let payload = await axios.get(`${url}/clients/${id}`, {
         headers: {
-          access_token
+          access_token: localStorage.access_token
         }
       });
       payload = payload.data;
