@@ -50,7 +50,7 @@ const AddDeviceModal = (props) => {
     try {
       e.preventDefault();
 
-      await axios.post('http://localhost:3000/devices', {
+      await axios.post('https://famstrack.herokuapp.com/devices', {
         arduinoUniqueKey: addInp,
         latitude: 21.42308112484804,
         longitude: 39.82571323893904,
@@ -75,7 +75,7 @@ const AddDeviceModal = (props) => {
     try {
       e.preventDefault();
 
-      await axios.put(`http://localhost:3000/devices/${dataEdit.id}`, {
+      await axios.put(`https://famstrack.herokuapp.com/devices/${dataEdit.id}`, {
         arduinoUniqueKey: editInp,
         latitude: dataEdit.latitude,
         longitude: dataEdit.longitude,
@@ -97,7 +97,7 @@ const AddDeviceModal = (props) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/devices/${id}`, {
+      await axios.delete(`https://famstrack.herokuapp.com/devices/${id}`, {
         headers: {
           access_token: localStorage.access_token
         }

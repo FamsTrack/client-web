@@ -14,7 +14,7 @@ function NewsCard(props) {
   }
 
   return (
-    <div className="news-cars-container-famtrack" onClick={handleClick}>
+    <div className="news-cars-container-famtrack" style={{cursor:'pointer'}} onClick={handleClick}>
       <div>
         <div>
           <img className="img-news-famtrack" src={image} width="100%" height="auto" />

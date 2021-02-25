@@ -16,7 +16,7 @@ function LoginCard({ setVisible }) {
     try {
       e.preventDefault();
 
-      let res = await axios.post('http://localhost:3000/weblogin', {
+      let res = await axios.post('https://famstrack.herokuapp.com/weblogin', {
         email,
         password
       })

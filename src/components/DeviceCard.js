@@ -9,7 +9,7 @@ function DeviceVard({ data }) {
   }
 
   return (
-    <div className="device-list-row-famtrack device-card-hov-famtrack" onClick={() => handleDetail(data.id)}>
+    <div className="device-list-row-famtrack device-card-hov-famtrack" style={{cursor:'pointer'}} onClick={() => handleDetail(data.id)}>
       <div className="name-device-famtrack">
         <div>
           <img className="img-devices-famtrack" src={typeof data.img === 'string' ? data.img : 'http://www.beautifulpeople.com/cdn/beautifulpeople/images/default_profile/signup_male.png'} />

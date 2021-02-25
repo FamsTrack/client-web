@@ -9,7 +9,7 @@ function GroupCard (props) {
   const history = useHistory();
   console.log(props.group);
   return (
-    <div className="d-flex justify-content-between align-items-center mb-3" onClick={() => history.push(`/groups/${id}`)}>
+    <div className="d-flex justify-content-between align-items-center mb-3" style={{cursor:'pointer'}} onClick={() => history.push(`/groups/${id}`)}>
       <h3>{name}</h3>
       <div className="d-flex align-items-center"><h3>{client.length + ' '}</h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-circle ms-2" viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>

@@ -36,7 +36,7 @@ const DeviceModal = (props) => {
     try {
       e.preventDefault();
 
-      await axios.put(`http://localhost:3000/devices/${data.id}`, {
+      await axios.put(`https://famstrack.herokuapp.com/devices/${data.id}`, {
         arduinoUniqueKey: data.arduinoUniqueKey,
         latitude: data.latitude,
         longitude: data.longitude,
@@ -49,7 +49,7 @@ const DeviceModal = (props) => {
         }
       });
 
-      await axios.put(`http://localhost:3000/devices/${newData.id}`, {
+      await axios.put(`https://famstrack.herokuapp.com/devices/${newData.id}`, {
         arduinoUniqueKey: newData.arduinoUniqueKey,
         latitude: newData.latitude,
         longitude: newData.longitude,
@@ -82,7 +82,7 @@ const DeviceModal = (props) => {
     try {
       e.preventDefault();
 
-      await axios.put(`http://localhost:3000/devices/${newData.id}`, {
+      await axios.put(`https://famstrack.herokuapp.com/devices/${newData.id}`, {
         arduinoUniqueKey: newData.arduinoUniqueKey,
         latitude: newData.latitude,
         longitude: newData.longitude,
