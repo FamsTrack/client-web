@@ -9,13 +9,15 @@ import familiesResolver from './resolvers/familiesResolver';
 import devicesResolver from './resolvers/devicesResolver';
 import newsResolver from './resolvers/newsResolver';
 import groupsResolver from './resolvers/groupsResolver';
+import scheduleResolver from './resolvers/scheduleResolver'
 
 const store = createStore(combineReducers({
   baseResolver,
   familiesResolver,
   devicesResolver,
   newsResolver,
-  groupsResolver
+  groupsResolver,
+  scheduleResolver
 }), applyMiddleware(thunk));
 
 export default store;

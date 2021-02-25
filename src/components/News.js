@@ -13,7 +13,7 @@ function News() {
     <div style={{"height": "100vh", "overflow": "auto"}} className="main-sub-div-famtrack">
       <div className="news-marg-famtrack">
         <div className="news-title-famtrack">
-          <h1 className="news-title-text-famtrack">Info</h1>
+          <h1 className="news-title-text-famtrack">Information</h1>
           <AddNewsModal />
         </div>
         <Switch>

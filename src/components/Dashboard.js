@@ -28,8 +28,8 @@ function Dashboard() {
             </svg>
           </div>
           <div className="time-dashboard-famtrack">
-            <h3 style={{ "margin": "0", "fontSize": "25px", "fontWeight": "300" }}><Clock ticking={true} timezone={'Asia/Riyadh'} /></h3>
-            <p style={{ "margin": "0" }}><i><Clock format={'dddd, MMMM Do YYYY'}/></i></p>
+            <h3 style={{ "margin": "0", "fontSize": "25px", "fontWeight": "300" }}><Clock  format={'HH:mm:ss'} ticking={true} timezone={'Asia/Riyadh'} /></h3>
+            <p style={{ "margin": "0" }}><i><Clock format={'dddd, MMMM Do YYYY'} timezone={'Asia/Riyadh'}/></i></p>
           </div>
           <div className="schedule-dashboard-famtrack">
             <h3 style={{ "margin": "0", "fontSize": "25px", "fontWeight": "500" }}>Schedule</h3>

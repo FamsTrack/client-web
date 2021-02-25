@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
 import { fetchNews, fetchNewsById } from "../store/actions/newsAction";
 import EditNewsModal from "./EditNewsModal";
-import axios from 'axios';
 import swal from 'sweetalert';
+import axios from 'axios';
 
 function NewsDetail () {
   const dispatch = useDispatch();
